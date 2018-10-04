@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: xxwycloud-config-dev
+---
+spring:
+  profiles: test
+  application:
+      name: xxwycloud-config-test
+# 保存用utf-8
