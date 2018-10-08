@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: xxwycloud-config-eureka-dev
+eureka:
+  instance:
+    hostname: localhost # eureka服务端的实例名称
+  client:
+    register-with-eureka: false
+    fetch-registry: false #自己是注册中心，我的职责是维护服务示例，不是检索服务
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务需要依赖这个地址
+---
+spring:
+  profiles: test
+  application:
+      name: xxwycloud-config-eureka-test
+# 保存用utf-8
+eureka:
+  instance:
+    hostname: localhost # eureka服务端的实例名称
+  client:
+    register-with-eureka: false
+    fetch-registry: false #自己是注册中心，我的职责是维护服务示例，不是检索服务
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务需要依赖这个地址
