@@ -3,6 +3,10 @@ spring:
     active:
     - dev
 ---
+xxwy:
+  user:
+    id: 10
+    name: xxwy10
 spring:
   profiles: dev
   application:
