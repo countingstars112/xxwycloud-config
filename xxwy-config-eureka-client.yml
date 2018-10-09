@@ -5,7 +5,7 @@ spring:
 ---
 xxwy:
   user:
-    id: 9
+    id: 8
     name: xxwy10
 spring:
   profiles: dev
